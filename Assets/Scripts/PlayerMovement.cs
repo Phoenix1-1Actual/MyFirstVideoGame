@@ -25,18 +25,24 @@ public class PlayerMovementScript : MonoBehaviour
     }
     void Update()
     {
+        // проверка работы земли:
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+        // сброс скорости по умолчанию:
         if (isGrounded && velocity.y < 0)
         {
             velocity.y = -2f;
         }
 
+        //получение данных:
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
-        Vector3 move = transform.right * x + transform.forward * z;
+        // создаем вектор движения:
+        Vector3 move = transform.right * x + transform.forward * z;//вправо - красная ось, вперед - синяя ось:
+        // действительно двигаем игрока:
         controller.Move(move * speed * Time.deltaTime);
 
+        // проверяем может ли игрок прыгать:
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
