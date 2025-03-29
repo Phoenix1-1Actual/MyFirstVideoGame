@@ -124,7 +124,7 @@ public class Weapon : MonoBehaviour
     {
         //SoundManager.Instance.reloadingSoundM1911.Play();
         SoundManager.Instance.PlayReloadSound(thisWeaponModel);
-        animator.SetTrigger("Reload");
+        animator.SetTrigger("RELOAD");
         isReloading = true;
         Invoke("ReloadCompleted", reloadTime);
     }
