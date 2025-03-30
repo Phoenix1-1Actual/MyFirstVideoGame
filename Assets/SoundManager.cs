@@ -31,6 +31,7 @@ public class SoundManager : MonoBehaviour
                 shootingSoundM1911.Play();
                 break;
             case WeaponModel.M4_8:
+                reloadingSoundM4A1.Play();
                 break;
         }
     }

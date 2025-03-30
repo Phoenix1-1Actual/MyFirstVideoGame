@@ -2153,7 +2153,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1651358026}
-  - component: {fileID: 1651358027}
   m_Layer: 0
   m_Name: BulletSpawn
   m_TagString: Untagged
@@ -2177,33 +2176,6 @@ Transform:
   - {fileID: 4640948189476651935}
   m_Father: {fileID: 8634450020764969107}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &1651358027
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1651358025}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &1725743125
 GameObject:
   m_ObjectHideFlags: 0
@@ -9176,7 +9148,7 @@ MonoBehaviour:
   shootingDelay: 1
   bulletsPerBurst: 1
   burstBulletsLeft: 1
-  spreadIntensity: 5
+  spreadIntensity: 0.1
   bulletPrefab: {fileID: 8026458217887339335, guid: f880be084312140468826c82e5406428, type: 3}
   bulletSpawn: {fileID: 1651358026}
   bulletVelocity: 700
