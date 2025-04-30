@@ -14,7 +14,6 @@ public class MouseMovement : MonoBehaviour
         // Делаем курсор неподвижным и невидимым:
         Cursor.lockState = CursorLockMode.Locked;
     }
-
     void Update()
     {
         // Движение мышки:

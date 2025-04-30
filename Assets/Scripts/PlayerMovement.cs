@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class PlayerMovementScript : MonoBehaviour
 {
-
     private CharacterController controller;
 
     public float speed = 12f;
@@ -19,7 +18,7 @@ public class PlayerMovementScript : MonoBehaviour
     bool isMoving;
 
     private Vector3 lastPosition = new Vector3(0f, 0f, 0f);
-     void Start()
+    void Start()
     {
         controller = GetComponent<CharacterController>();
     }
@@ -51,7 +50,7 @@ public class PlayerMovementScript : MonoBehaviour
 
         controller.Move(velocity * Time.deltaTime);
 
-        if (lastPosition != gameObject.transform.position && isGrounded ==true)
+        if (lastPosition != gameObject.transform.position && isGrounded == true)
         {
             isMoving = true;
         }
