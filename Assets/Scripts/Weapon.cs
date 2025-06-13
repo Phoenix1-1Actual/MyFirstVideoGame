@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    public bool isActiveWeapon;
+    public bool isActiveWeapon = false;
     // סענוכüבא:
     public bool isShooting, readyToShoot;
     bool allowReset = true;
